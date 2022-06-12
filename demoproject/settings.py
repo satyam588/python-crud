@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-vxp%k21c3a(p&3$hozs4$5--t%)nrat&(u52chj(uhe(b92#b(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'http://crud-demo-python.herokuapp.com', 'https://crud-demo-python.herokuapp.com', 'hcrud-demo-python.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'http://crud-demo-python.herokuapp.com', 'https://crud-demo-python.herokuapp.com', 'crud-demo-python.herokuapp.com']
 
 
 # Application definition
