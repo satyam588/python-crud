@@ -56,7 +56,7 @@ def create(request, id=""):
         context = {"single_student": tbl_student.objects.get(id=id), "id": id}
         return render(request, "create.html", context)
 
-    return render(request, "create.html", context)
+    return render(request, "create.html")
 
 
 def edit(request, id):
