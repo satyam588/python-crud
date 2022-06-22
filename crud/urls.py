@@ -21,6 +21,7 @@ urlpatterns = [
     path("", views.index, name="Read Operation"),
     path("create/", views.create, name="Create Operation"),
     path("create/<int:id>", views.create, name="Create Operation"),
+    path("delete/<int:id>", views.delete, name="Delete Operation"),
     # path("edit/", views.edit, name="Edit Operation"),
     path("about/", views.about, name="About Page"),
     path("all/", views.getall, name="All Students"),

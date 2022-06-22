@@ -8,6 +8,7 @@ from django.contrib import messages
 
 def index(request):
     context = {"demoVar": "Sent using Variable"}
+    request.session['fav_color'] = context['demoVar']
     return render(request, "index.html", context)
     # return HttpResponse("Lisitng of Students")
 
@@ -64,9 +65,18 @@ def edit(request, id):
 
 
 def about(request):
-    return render(request, "about.html")
+    context = {
+        'session_data': request.session['fav_color']
+    }
+    return render(request, "about.html", context)
 
 
 def getall(request):
     context = {"student": tbl_student.objects.all()}
     return render(request, "display.html", context)
+
+def delete(request, id=""):
+    if id != '':
+        tbl_student.objects.filter(id=id).delete()
+        messages.success(request, "Student deleted successfully.")
+        return redirect("/all")
